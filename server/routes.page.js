@@ -6,6 +6,7 @@ const logCore = require('./log.core');
 const custom = require('./custom');
 const CONFIG = require('../config.json');
 
+const user = "chaoma@corp.netease.com";
 // 检查部分关键字段的格式
 ["upload", "publish"].forEach(function(key) {
   CONFIG[key].ftp.publicPathPrefix = CONFIG[key].ftp.publicPathPrefix.replace(/[/\\]+$/g, "") + "/";
