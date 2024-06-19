@@ -47,7 +47,7 @@ const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 const path = require('path');
 const dataBase = require('./fileDB');
-const openId = require("./openId");
+// const openId = require("./openId");
 const popo = require('./popo');
 const notify = require('./notify');
 const is = require('./utils').is;
@@ -176,7 +176,7 @@ function initGlobalVar(Config) {
     Name: Config.Name,
     root: Config.root,
     event: event,
-    openId: openId,
+    openId: '',
     notify: notify,
     popo: popo,
     getDataBase: dataBase
@@ -190,8 +190,6 @@ function initGlobalVar(Config) {
 
 function initMainRouter(Config) {
   let mainRouter = express.Router();
-  //设置登录相关路由
-  openId.addRouter(mainRouter);
 
   //强制排除服务器端用的数据文件目录和日志目录
   mainRouter.use(['/files/data', '/logs'], function (req, res) {
