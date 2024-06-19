@@ -161,8 +161,8 @@ function initAppConf(Config) {
   // 统一设置登录信息
   app.use(function (req, res, next) {
     res.locals.User = {
-      name: req.session ? req.session.name : "",
-      user: req.session ? req.session.user : ""
+      name: "chaoma",
+      user: "chaoma@corp.netease.com"
     };
     next();
   });
