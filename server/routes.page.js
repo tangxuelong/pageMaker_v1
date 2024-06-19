@@ -15,8 +15,7 @@ const CONFIG = require('../config.json');
 // 所以需要异步处理
 function prepareConfigData(callback) {
   return (req, res) => {
-    NFOP.openId.checkLogin(req, res, "page", function (user, name) {
-      dataCore.getConfigForBrowser(req.CONFIG)
+    dataCore.getConfigForBrowser(req.CONFIG)
         .then(config => callback(req, res, config, user, name))
         .catch(e => {
           res.status(500).render('view/error', {
@@ -24,7 +23,6 @@ function prepareConfigData(callback) {
             desc: e || "服务器出现异常错误，暂时无法访问。"
           });
         });
-    });
   }
 }
 

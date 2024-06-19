@@ -1,8 +1,8 @@
 {
-	"id": "caipiao",
-  "name": "caipiao",
-	"NAME": "网易彩票",
-	"homePage": "http://myhomepage.com",
+	"id": "pageMaker",
+  	"name": "pageMaker",
+	"NAME": "pageMaker",
+	"homePage": "/",
 	"func": {
 		"customItem": true,
 		"customCodeLib": false,
@@ -59,7 +59,7 @@
 			"secureOptions": {},
 			"user": "--",
 			"password": "--",
-			"dir": "caipiao",
+			"dir": "pageMaker",
 			"publicPathPrefix": "https://caipiao.163.com/nfop/"
 		}
 	}

@@ -19,18 +19,16 @@ module.exports = function (configs) {
 
   // 上传接口
   router.post("/upload", function (req, res) {
-    NFOP.openId.checkLogin(req, res, "ajax", function (user, name) {
-      upload(req.CONFIG, req, user, name).then(function (data) {
-        res.json({
-          err: 0,
-          data: data
-        });
-      }).catch(e => {
-        res.json({
-          err: 1,
-          desc: e
-        })
+    upload(req.CONFIG, req, user, name).then(function (data) {
+      res.json({
+        err: 0,
+        data: data
       });
+    }).catch(e => {
+      res.json({
+        err: 1,
+        desc: e
+      })
     });
   });
 
@@ -67,13 +65,7 @@ module.exports = function (configs) {
 
   // 发布页面
   router.post('/publish', function (req, res) {
-    NFOP.openId.checkLogin(req, res, "ajax", function (user, name) {
-      if (!user) {
-        return res.json({
-          err: -1
-        })
-      }
-      publish(req.CONFIG, req.body, user, name)
+    publish(req.CONFIG, req.body, user, name)
         .then(data => {
           res.json({
             err: 0,
@@ -85,7 +77,6 @@ module.exports = function (configs) {
             desc: e
           });
         })
-    });
   });
 
   // 查询已经发布的页面
@@ -121,21 +112,12 @@ module.exports = function (configs) {
 
   // 删除私有组件（非公开接口）
   router.get('/custom/del/:name', function (req, res) {
-    NFOP.openId.checkLogin(req, res, "ajax", function (user, name) {
-      custom.del(req, user, name, ret => res.json(ret));
-    });
+    custom.del(req, user, name, ret => res.json(ret));
   });
 
   // 发布私有组件
   router.post('/custom/publish', function (req, res) {
-    NFOP.openId.checkLogin(req, res, "ajax", function (user, name) {
-      if (!user) {
-        return res.json({
-          err: -1
-        })
-      }
-      custom.pusblish(req, user, name, ret => res.json(ret));
-    });
+    custom.pusblish(req, user, name, ret => res.json(ret));
   });
 
   // 返回路由
