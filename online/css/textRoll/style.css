@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'textRoll';
+  src:  url('fonts/textRoll.eot?eg408n');
+  src:  url('fonts/textRoll.eot?eg408n#iefix') format('embedded-opentype'),
+    url('fonts/textRoll.ttf?eg408n') format('truetype'),
+    url('fonts/textRoll.woff?eg408n') format('woff'),
+    url('fonts/textRoll.svg?eg408n#textRoll') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'textRoll' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bullhorn:before {
+  content: "\e91a";
+}
+.icon-bell:before {
+  content: "\e951";
+}
+.icon-bubbles4:before {
+  content: "\e970";
+}
+.icon-quotes-left:before {
+  content: "\e977";
+}
+.icon-gift:before {
+  content: "\e99f";
+}
+.icon-fire:before {
+  content: "\e9a9";
+}
+.icon-flag:before {
+  content: "\e9cc";
+}
+.icon-volume-medium:before {
+  content: "\ea27";
+}
+

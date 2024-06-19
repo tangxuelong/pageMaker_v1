@@ -1,0 +1,66 @@
+{
+	"id": "caipiao",
+  "name": "caipiao",
+	"NAME": "网易彩票",
+	"homePage": "http://myhomepage.com",
+	"func": {
+		"customItem": true,
+		"customCodeLib": false,
+		"careForPC": true,
+		"jsonDownload": true,
+		"inlineCss": false,
+		"usePrivateCss": false,
+		"privateCss": ""
+	},
+	"item": {
+		"share": {
+			"jsFile": "//pimg1.126.net/nfop/common/appcore.js?$pubKey$",
+			"initCode": "window.AppCore&&AppCore.share($shareData$)",
+			"triggerCode": "window.AppCore&&window.AppCore.shareNow()",
+			"defShareImg": "",
+			"defShareTitle": "默认分享标题",
+			"defShareDesc": "默认分享描述巴拉巴拉"
+		},
+		"app": {
+			"jsFile": "#",
+			"code": "AppCore.getAppName()==\"caipiao\";"
+		}
+	},
+	"upload": {
+		"loseless": true,
+		"maxImageWidth": 900,
+		"alert": {
+			"url": ""
+		},
+		"ftp": {
+			"timeout": 5,
+			"host": "--",
+			"port": 21,
+			"secure": false,
+			"secureOptions": {},
+			"user": "--",
+			"password": "--",
+			"dir": "uploadTest",
+			"publicPathPrefix": "//pimg1.126.net/nfop/uploadTest/"
+		}
+	},
+	"publish": {
+		"notify": {
+			"url": ""
+		},
+		"alert": {
+			"url": ""
+		},
+		"ftp": {
+			"timeout": 5,
+			"host": "--",
+			"port": 21,
+			"secure": false,
+			"secureOptions": {},
+			"user": "--",
+			"password": "--",
+			"dir": "caipiao",
+			"publicPathPrefix": "https://caipiao.163.com/nfop/"
+		}
+	}
+}

@@ -1,0 +1,50 @@
+/**
+ * 选项列表
+ */
+.optionList{
+	margin-bottom: 5px;
+	-webkit-appearance: none;
+	color: #5d5d5d;
+}
+.optionList li{
+	background-color: #fff;
+	display: block;
+	list-style: none;
+	border-bottom: 1px solid #ddd;
+	vertical-align: middle;
+}
+.optionList li:first-child{
+	border-top: 1px solid #ddd;
+}
+.optionList li label{
+	display: block;
+	text-indent: .8333rem;
+	padding: 1rem .5rem;
+}
+.optionList li input{
+	margin-right: .2rem;
+	vertical-align: middle;
+}
+.optionList li span{
+	vertical-align: middle;
+}
+.optionList textarea{
+	border: none;
+	resize : none;
+	display: block;
+	width: 100%;
+	padding: .8333rem 1.1rem;
+	color: #5d5d5d;
+}
+.fs1.optionList,
+.fs1.optionList textarea{
+	font-size: .917rem;
+}
+.fs2.optionList,
+.fs2.optionList textarea{
+	font-size: 1.083rem;
+}
+.fs3.optionList,
+.fs3.optionList textarea{
+	font-size: 1.333rem;
+}

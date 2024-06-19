@@ -1,0 +1,41 @@
+.bigBtn {
+    display: block;
+    font-size: 1.33rem;
+    line-height: 3.667rem;
+    background-color: #f26061;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    background-clip: padding-box;
+}
+.bigBtn.bigRadius{
+    border-radius: 1.834rem;
+}
+.bigBtn:visited, .bigBtn:hover {
+    color: #fff;
+}
+.greenBtn {
+    background-color: #28d067;
+}
+.blueBtn {
+    background-color: #4095d6;
+}
+.orangeBtn{
+    background-color: #ff9c00;
+}
+.yellowBtn, .yellowBtn:visited, .yellowBtn:hover {
+    background-color: #ffb400;
+    color: #38200b;
+}
+.bigBtn.disabled,
+.bigBtn.disabled:visited,
+.bigBtn.disabled:hover{
+    background-color: #aaa;
+    color: #fff;
+}
+.imgBtn{
+    display: block;
+}

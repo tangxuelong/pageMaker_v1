@@ -1,0 +1,20 @@
+/**
+ * 简易下拉菜单
+ */
+
+.dropdownMenu {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    margin: 2px 0 0;
+    max-width: 303px;
+    min-width: 160px;
+    padding: 5px 0 0 5px;
+    position: absolute;
+    z-index: 101;
+    line-height: 1;
+
+    height: 150px;
+}

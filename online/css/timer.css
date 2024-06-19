@@ -1,0 +1,89 @@
+@font-face {
+	font-family: 'timer';
+	src: url(timer/fonts/timer.ttf?kxw6c4) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.iconTimer {
+	font-family: "timer", "verdana";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.timer-clock:before {
+    content: "\e94e";
+}
+.timer-clock2:before {
+    content: "\e94f";
+}
+.timer-alarm:before {
+    content: "\e950";
+}
+.timer-stopwatch:before {
+    content: "\e952";
+}
+.timer-glass:before {
+    content: "\e979";
+}
+.timer-fire:before {
+    content: "\e9a9";
+}
+
+/* 倒计时主容器样式 */
+.timer{
+	text-align: center;
+	font-size: 1.083rem;
+}
+.timerwrap{
+	height: 2rem;
+	line-height: 2rem;
+}
+.timerwrap .iconTimer{
+	margin-right: 5px
+}
+
+.imgTimer > div{
+	position: relative;
+}
+.imgTimer .timerwrap{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	margin-top: -1rem;
+}
+.timerwrap i{
+	background-clip: padding-box;
+	border-radius: 0.3rem;
+	background-color: #d91d37;
+	color: #f9f8f0;
+	padding: 0 2px;
+	display: inline-block;
+	line-height: 1.4;
+}
+
+.timer.fs3 .timerwrap i{
+	padding: 0 .125rem;
+}
+
+.fixedTimer{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.fixedTimer.mtop .timerwrap{
+	top: 43%
+}
+.fixedTimer.mbtm .timerwrap{
+	top: 57%
+}

@@ -1,0 +1,231 @@
+/**
+ * 简易颜色选择器
+ */
+
+.colorPickerBox {
+	background-clip: padding-box;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	margin: 2px 0 0;
+	max-width: 326px;
+	min-width: 160px;
+	padding: 5px 0 0 5px;
+	position: absolute;
+	z-index: 101;
+	line-height: 1;
+}
+
+.colorPickerBox .colorItem {
+	border: 1px solid transparent;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 5px 5px 0;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+}
+
+.colorPickerBox .transColor,
+.colorPickerBox .defColor {
+	border-color: rgba(0, 0, 0, .176);
+}
+
+.colorPickerBox .colorItem:hover {
+	transform: scale(1.1);
+}
+
+.colorPickerBox .active {
+	border-color: #aaa;
+	position: relative;
+	overflow: hidden;
+}
+
+.colorPickerBox .active:hover {
+	transform: scale(1);
+}
+
+.colorPickerBox .active:after {
+	content: "";
+	position: absolute;
+	background-color: #fff;
+	display: block;
+	height: 16px;
+	width: 16px;
+	bottom: -9px;
+	right: -9px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.176);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+
+/* 2016-08-22 新增高级rgba编辑模块 */
+
+.rgbaColorMaker {
+	margin: 0 5px 5px 0;
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.previewColorBox {
+	display: table-cell;
+	vertical-align: top;
+	width: 79px;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjIiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjAiIHk9IjAiIHN0eWxlPSJmaWxsOiNjYWNhY2EiIC8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMSIgeT0iMSIgc3R5bGU9ImZpbGw6I2NhY2FjYSIgLz48L3N2Zz4=);
+	background-size: 41%;
+	border-radius: 4px;
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .2) inset;
+	position: relative;
+}
+
+.previewColorItem {
+	position: absolute;
+	border-radius: 4px;
+	height: 100%;
+	width: 100%;
+}
+
+.colorMakerBox {
+	box-sizing: border-box;
+	padding-left: 5px;
+}
+
+.colorMakerBarBoxWrap {
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+	padding-right: 5px;
+	margin-bottom: 5px;
+}
+
+.colorMakerBarBoxWrap.A {
+	margin-bottom: 0;
+}
+
+.colorMakerBarBoxWrap:before {
+	content: "R:";
+	font-family: Arial, Helvetica, sans-serif;
+	display: table-cell;
+	width: 16px;
+	vertical-align: top;
+	text-align: center;
+}
+
+.colorMakerBarBoxWrap.G:before {
+	content: "G:"
+}
+
+.colorMakerBarBoxWrap.B:before {
+	content: "B:"
+}
+
+.colorMakerBarBoxWrap.A:before {
+	content: "A:"
+}
+
+.colorMakerInputWrap {
+	display: table-cell;
+	vertical-align: top;
+	width: 32px;
+}
+
+.colorMakerInputWrap input {
+	width: 28px;
+	height: 16px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.colorMakerBarWrap {
+	display: table-cell;
+	vertical-align: top;
+	height: 16px;
+	overflow: hidden;
+}
+
+.colorMakerBar {
+	display: block;
+	height: 16px;
+	box-sizing: border-box;
+    position: relative;
+    background: rgba(128,128,128,.12);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .2) inset;
+    overflow: hidden;
+    cursor: col-resize;
+}
+.R .colorMakerBar{
+	background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 0, 0));
+}
+.G .colorMakerBar{
+	background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 255, 0));
+}
+.B .colorMakerBar{
+	background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 255));
+}
+.A .colorMakerBar{
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+.A .colorMakerBar:before{
+	content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: left center;
+    background-size: auto 41%;
+    z-index: -1;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjIiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjAiIHk9IjAiIHN0eWxlPSJmaWxsOiNjYWNhY2EiIC8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMSIgeT0iMSIgc3R5bGU9ImZpbGw6I2NhY2FjYSIgLz48L3N2Zz4=);
+}
+.colorMakerBar span{
+	display: inline-block;
+    position: relative;
+    content: '';
+    margin-left: -3px;
+    width: 6px;
+    height: 100%;
+    background: rgba(200,200,200,.8);
+    box-shadow:0 0 0 1px #fff inset;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 颜色结果 */
+.colorResultBox {
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0 5px 5px 0px;
+	position: relative;
+}
+
+.colorResult input {
+	display: table-cell;
+	font-size: 14px;
+	height: 24px;
+	line-height: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	border: none;
+}
+
+.colorResultBox .colorChooseWrap{
+	display: table-cell;
+	width: 80px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+.colorChooseWrap a{
+	display: inline-block;
+	font-size: 12px;
+	line-height: 24px;
+	padding: 0 22px;
+	border-radius: 4px;
+	border:1px solid #ccc;
+	text-decoration: none;
+}

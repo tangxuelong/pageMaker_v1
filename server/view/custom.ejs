@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="shortcut icon" type="image/png" href="/fav.png?steem">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>pageMaker私有组件</title>
+  <meta name="renderer" content="webkit" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="/public/res/custom.css" />
+</head>
+<body role="document">
+	<div style="height:15px"></div>
+	<div class="mainBody">
+    <ul class="operateBox">
+      <li><a href='javascript:;' data-action='import'>导入</a></li>
+      <li><a href='javascript:;' data-action='reset'>重置</a></li>
+      <li><a href='javascript:;' data-action='preview'>预览</a></li>
+      <li><a href='javascript:;' data-action='submit'>提交</a></li>
+    </ul>
+		<div id="codeBox">
+      <div class="panel panel-default">
+        <div class="panel-heading"><span class="conf-group-name">创建pageMaker私有组件</span>&nbsp;</div>
+        <div class="panel-body form-horizontal" role="form" id="mainPanelBody">
+          <div id="fulljsWrap"><div class="loading">loading...</div></div>
+          <div id="listWrap" class="hideList"><div class="loading">loading...</div></div>
+        </div>
+      </div>
+    </div>
+		<ul class="operateBox">
+			<li><a href='javascript:;' data-action='import'>导入</a></li>
+			<li><a href='javascript:;' data-action='reset'>重置</a></li>
+			<li><a href='javascript:;' data-action='preview'>预览</a></li>
+			<li><a href='javascript:;' data-action='submit'>提交</a></li>
+    </ul>
+	</div>
+	<script src="/lib/require.js" data-main="/public/entry" data-js="./custom"></script>
+</body>
+
+</html>

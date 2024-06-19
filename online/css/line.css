@@ -1,0 +1,10 @@
+.line {
+    height: 0;
+    border-top: 1px solid #000;
+}
+.line.s1{
+	border-top-style: dashed;
+}
+.line.s2{
+	border-top-style: dotted;
+}

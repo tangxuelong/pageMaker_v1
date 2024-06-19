@@ -1,0 +1,24 @@
+/* 链接动效
+使用 active伪类实现。其中ISO
+需要设置body元素的touchstart才可以使得actvie生效;
+http://stackoverflow.com/questions/3885018/active-pseudo-class-doesnt-work-in-mobile-safari?rq=1
+*/
+.aniLink{
+    display: block;
+}
+.aniOpac:active{
+    opacity: .85;
+}
+.aniZoom:active{
+    transform: scale(.98);
+    -webkit-transform: scale(.98);
+}
+.aniDown:active {
+    transform: translateY(.15rem) translateX(.15rem);
+    -webkit-transform: translateY(.15rem) translateX(.15rem);
+}
+.aniZoom.aniDown:active{
+	transform: translateY(.15rem) translateX(.15rem) scale(.98);
+    -webkit-transform: translateY(.15rem) translateX(.15rem) scale(.98);
+}
+

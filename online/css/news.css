@@ -1,0 +1,63 @@
+/* 资讯新闻 */
+
+.newsBox.line1 {
+    border-bottom: 1px solid #ddd
+}
+.newsBox.line2 {
+    border-bottom: 1px dotted #ddd
+}
+.newsBox a, .newsBox a:link, .newsBox a:visited {
+    color: #828281;
+    text-decoration: none;
+}
+.newsBox .newsLink {
+    display: table;
+    width: 100%;
+    line-height: 1.54rem;
+}
+.newsBox .newsImg {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    width: 6.5rem;
+}
+.newsBox .newsImg:nth-child(1){
+    text-align: right;
+}
+.newsBox .newsImg img {
+    width: 6.25rem;
+}
+.s2 .newsImg{
+    width: 5rem;
+}
+.s2 .newsImg img {
+    width: 4.5rem;
+}
+.newsImg .holderImage {
+    background-size: 50%;
+}
+.newsBox .newsCtn {
+    position: relative;
+    display: table-cell;
+    min-height: 5rem;
+    vertical-align: middle;
+    text-align: left;
+}
+.newsBox .newsLink h2 {
+    padding: .2rem 0 .2rem .5rem;
+    font-size: 1.33rem;
+    color: #000;
+    line-height: 1.2em;
+}
+.newsBox.samefs .newsLink h2{
+    font-size: 1.08rem;
+    padding: .3rem 0 .3rem .5rem;
+}
+.newsBox .newsLink p {
+    padding-left: 0.5rem;
+    font-size: 1.08rem;
+    color: #828281;
+    line-height: 1.42rem;
+    max-height: 2.84rem;
+    overflow: hidden;
+}

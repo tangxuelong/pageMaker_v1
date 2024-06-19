@@ -1,0 +1,154 @@
+.audioBox{
+	padding: 1rem 1rem 1rem 1.1rem;
+	display: table;
+	width: 100%;
+}
+.audioBox li{
+	display: table-cell;
+	vertical-align: middle;
+}
+.mediaCtrl .audioBox i{
+	position: relative;
+	margin: auto;
+	left: auto;
+	top: auto;
+	box-shadow: none;
+}
+.audioBox li:first-child{
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	width: 1px;
+	padding-right: 1.1rem;
+}
+.audioBox li:last-child{
+	padding-left: 1.1rem;
+	text-align: left;
+	color: #fff;
+}
+.audioBox li h1{
+	font-size: 1.3rem;
+	padding: .2rem 0;
+}
+.audioBox li h2{
+	font-size: 1rem;
+	padding: .1rem 0;
+}
+
+/* 重置控制器尺寸 */
+.mediaCtrl .audioBox i{
+	width: 3.74rem;
+    height: 3.74rem;
+    border-width:.1667rem;
+}
+.mediaCtrl .audioBox i:after {
+    left: 1.355rem;
+    top: .936rem;
+    border-width: .819rem 0 .819rem 1.17rem;
+}
+.playing .audioBox i::after,.playing .audioBox i::before {
+    left: 1.148rem;
+    top: .936rem;
+    width: 0.273rem;
+    height: 1.56rem;
+}
+.playing .audioBox i::after {
+    left: 1.967rem;
+}
+.loading .audioBox i {
+	margin: 1.597rem;
+    height: .546rem;
+    width: .546rem;
+}
+
+/* 图片模式内嵌样式 */
+.audioWithImg .audioBox{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,.6);
+}
+
+/* 文本格式（默认灰色） */
+.audioJustText .audioBox{
+	border:1px solid #d0d0d0;
+	background: #f4f4f4;
+	border-radius: .25rem
+}
+.audioJustText li h1{
+	color: #000;
+}
+.audioJustText li h2{
+	color: #999;
+}
+.audioJustText li:first-child{
+	border-color: #d0d0d0;
+}
+.audioJustText .audioBox i {
+    background-color: rgba(0, 0, 0, 0);
+    border-color:#bfbfbf;
+}
+.audioJustText .audioBox i:after{
+	border-color: transparent transparent transparent #bfbfbf;
+}
+.audioJustText.playing i::after, .audioJustText.playing i::before {
+    background: #bfbfbf;
+}
+.audioJustText.loading i {
+   -webkit-transform: scale(0.78);
+    transform: scale(0.78);
+
+    animation: 1.3s linear 0s normal none infinite load5;
+    -webkit-animation: 1.3s linear 0s normal none infinite load5;
+}
+
+@keyframes load5 {
+    0%, 100% {
+        box-shadow: 0 -2em 0 0.2em #bfbfbf, 1.333em -1.333em 0 0 #bfbfbf, 2em 0 0 -0.5em #bfbfbf, 1.333em 1.333em 0 -0.5em #bfbfbf, 0 2em 0 -0.5em #bfbfbf, -1.333em 1.333em 0 -0.5em #bfbfbf, -2em 0 0 -0.5em #bfbfbf, -1.333em -1.333em 0 0 #bfbfbf;
+    }
+    12.5% {
+        box-shadow: 0 -2em 0 0 #bfbfbf, 1.333em -1.333em 0 0.2em #bfbfbf, 2em 0 0 0 #bfbfbf, 1.333em 1.333em 0 -0.5em #bfbfbf, 0 2em 0 -0.5em #bfbfbf, -1.333em 1.333em 0 -0.5em #bfbfbf, -2em 0 0 -0.5em #bfbfbf, -1.333em -1.333em 0 -0.5em #bfbfbf;
+    }
+    25% {
+        box-shadow: 0 -2em 0 -0.5em #bfbfbf, 1.333em -1.333em 0 0 #bfbfbf, 2em 0 0 0.2em #bfbfbf, 1.333em 1.333em 0 0 #bfbfbf, 0 2em 0 -0.5em #bfbfbf, -1.333em 1.333em 0 -0.5em #bfbfbf, -2em 0 0 -0.5em #bfbfbf, -1.333em -1.333em 0 -0.5em #bfbfbf;
+    }
+    37.5% {
+        box-shadow: 0 -2em 0 -0.5em #bfbfbf, 1.333em -1.333em 0 -0.5em #bfbfbf, 2em 0 0 0 #bfbfbf, 1.333em 1.333em 0 0.2em #bfbfbf, 0 2em 0 0 #bfbfbf, -1.333em 1.333em 0 -0.5em #bfbfbf, -2em 0 0 -0.5em #bfbfbf, -1.333em -1.333em 0 -0.5em #bfbfbf;
+    }
+    50% {
+        box-shadow: 0 -2em 0 -0.5em #bfbfbf, 1.333em -1.333em 0 -0.5em #bfbfbf, 2em 0 0 -0.5em #bfbfbf, 1.333em 1.333em 0 0 #bfbfbf, 0 2em 0 0.2em #bfbfbf, -1.333em 1.333em 0 0 #bfbfbf, -2em 0 0 -0.5em #bfbfbf, -1.333em -1.333em 0 -0.5em #bfbfbf;
+    }
+    62.5% {
+        box-shadow: 0 -2em 0 -0.5em #bfbfbf, 1.333em -1.333em 0 -0.5em #bfbfbf, 2em 0 0 -0.5em #bfbfbf, 1.333em 1.333em 0 -0.5em #bfbfbf, 0 2em 0 0 #bfbfbf, -1.333em 1.333em 0 0.2em #bfbfbf, -2em 0 0 0 #bfbfbf, -1.333em -1.333em 0 -0.5em #bfbfbf;
+    }
+    75% {
+        box-shadow: 0 -2em 0 -0.5em #bfbfbf, 1.333em -1.333em 0 -0.5em #bfbfbf, 2em 0 0 -0.5em #bfbfbf, 1.333em 1.333em 0 -0.5em #bfbfbf, 0 2em 0 -0.5em #bfbfbf, -1.333em 1.333em 0 0 #bfbfbf, -2em 0 0 0.2em #bfbfbf, -1.333em -1.333em 0 0 #bfbfbf;
+    }
+    87.5% {
+        box-shadow: 0 -2em 0 0 #bfbfbf, 1.333em -1.333em 0 -0.5em #bfbfbf, 2em 0 0 -0.5em #bfbfbf, 1.333em 1.333em 0 -0.5em #bfbfbf, 0 2em 0 -0.5em #bfbfbf, -1.333em 1.333em 0 0 #bfbfbf, -2em 0 0 0 #bfbfbf, -1.333em -1.333em 0 0.2em #bfbfbf;
+    }
+}
+@-webkit-keyframes load5 {
+    0%, 100% {
+        box-shadow: 0 -2em 0 0.2em #bfbfbf, 1.333em -1.333em 0 0 #bfbfbf, 2em 0 0 -0.5em #bfbfbf, 1.333em 1.333em 0 -0.5em #bfbfbf, 0 2em 0 -0.5em #bfbfbf, -1.333em 1.333em 0 -0.5em #bfbfbf, -2em 0 0 -0.5em #bfbfbf, -1.333em -1.333em 0 0 #bfbfbf;
+    }
+    12.5% {
+        box-shadow: 0 -2em 0 0 #bfbfbf, 1.333em -1.333em 0 0.2em #bfbfbf, 2em 0 0 0 #bfbfbf, 1.333em 1.333em 0 -0.5em #bfbfbf, 0 2em 0 -0.5em #bfbfbf, -1.333em 1.333em 0 -0.5em #bfbfbf, -2em 0 0 -0.5em #bfbfbf, -1.333em -1.333em 0 -0.5em #bfbfbf;
+    }
+    25% {
+        box-shadow: 0 -2em 0 -0.5em #bfbfbf, 1.333em -1.333em 0 0 #bfbfbf, 2em 0 0 0.2em #bfbfbf, 1.333em 1.333em 0 0 #bfbfbf, 0 2em 0 -0.5em #bfbfbf, -1.333em 1.333em 0 -0.5em #bfbfbf, -2em 0 0 -0.5em #bfbfbf, -1.333em -1.333em 0 -0.5em #bfbfbf;
+    }
+    37.5% {
+        box-shadow: 0 -2em 0 -0.5em #bfbfbf, 1.333em -1.333em 0 -0.5em #bfbfbf, 2em 0 0 0 #bfbfbf, 1.333em 1.333em 0 0.2em #bfbfbf, 0 2em 0 0 #bfbfbf, -1.333em 1.333em 0 -0.5em #bfbfbf, -2em 0 0 -0.5em #bfbfbf, -1.333em -1.333em 0 -0.5em #bfbfbf;
+    }
+    50% {
+        box-shadow: 0 -2em 0 -0.5em #bfbfbf, 1.333em -1.333em 0 -0.5em #bfbfbf, 2em 0 0 -0.5em #bfbfbf, 1.333em 1.333em 0 0 #bfbfbf, 0 2em 0 0.2em #bfbfbf, -1.333em 1.333em 0 0 #bfbfbf, -2em 0 0 -0.5em #bfbfbf, -1.333em -1.333em 0 -0.5em #bfbfbf;
+    }
+    62.5% {
+        box-shadow: 0 -2em 0 -0.5em #bfbfbf, 1.333em -1.333em 0 -0.5em #bfbfbf, 2em 0 0 -0.5em #bfbfbf, 1.333em 1.333em 0 -0.5em #bfbfbf, 0 2em 0 0 #bfbfbf, -1.333em 1.333em 0 0.2em #bfbfbf, -2em 0 0 0 #bfbfbf, -1.333em -1.333em 0 -0.5em #bfbfbf;
+    }
+    75% {
+        box-shadow: 0 -2em 0 -0.5em #bfbfbf, 1.333em -1.333em 0 -0.5em #bfbfbf, 2em 0 0 -0.5em #bfbfbf, 1.333em 1.333em 0 -0.5em #bfbfbf, 0 2em 0 -0.5em #bfbfbf, -1.333em 1.333em 0 0 #bfbfbf, -2em 0 0 0.2em #bfbfbf, -1.333em -1.333em 0 0 #bfbfbf;
+    }
+    87.5% {
+        box-shadow: 0 -2em 0 0 #bfbfbf, 1.333em -1.333em 0 -0.5em #bfbfbf, 2em 0 0 -0.5em #bfbfbf, 1.333em 1.333em 0 -0.5em #bfbfbf, 0 2em 0 -0.5em #bfbfbf, -1.333em 1.333em 0 0 #bfbfbf, -2em 0 0 0 #bfbfbf, -1.333em -1.333em 0 0.2em #bfbfbf;
+    }
+}

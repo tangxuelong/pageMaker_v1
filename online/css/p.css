@@ -1,0 +1,43 @@
+.p{
+	text-align: left;
+	background-size: 100% auto;
+	background-repeat: repeat-y;
+	margin-bottom: .416rem;
+	position: relative;
+}
+.p p{
+	margin-bottom: .416rem;
+	text-align: justify;
+	text-justify: inter-word;
+	word-break: break-all;
+}
+.p.bigP p{
+	margin-bottom: 1.25rem;
+}
+.p p:last-child{
+	margin-bottom: 0!important;
+}
+.p a{
+	text-decoration: underline;
+}
+.p.indent p{
+	text-indent: 2em;
+}
+.p.bigLH{
+	line-height: 1.833;
+}
+.p.bigLH p{
+	margin-bottom: .508rem;
+}
+.p.noline a{
+	text-decoration: none;
+}
+.p.center p{
+	text-align: center;
+}
+.p.right p{
+	text-align: right;
+}
+.p.radius{
+	border-radius: .5rem;
+}

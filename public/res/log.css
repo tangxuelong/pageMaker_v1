@@ -1,0 +1,72 @@
+.navbar {
+  border-radius: 0
+}
+.list-group,
+.search-box {
+  padding: 10px 0;
+  z-index: 3;
+  top: 0;
+}
+.search-box {
+  margin-bottom: 15px;
+  background: #fff;
+}
+.search-box small {
+  color: #aaa
+}
+.search-top {
+  display: table;
+  width: 100%
+}
+.search-top .input-box {
+  display: table-cell;
+  vertical-align: top
+}
+
+.search-top .btn-box {
+  display: table-cell;
+  width: 78px;
+  text-align: right
+}
+
+.btn-box .btn b {
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.pubFld b {
+  display: inline-block;
+  width: 20px;
+}
+
+.log-table {
+  font-family: tahoma
+}
+
+.log-table .glyphicon {
+  color: #666;
+}
+
+.nullTR td {
+  padding: 20px!important;
+  text-align: center
+}
+
+tr.hide,
+tr.hide td {
+  display: none;
+}
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+.list-group {
+  padding-bottom: 0
+}
+
+td {
+  word-wrap: break-word;
+  white-space: normal;
+  word-break: break-all;
+}

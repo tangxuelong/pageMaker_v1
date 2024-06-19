@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="shortcut icon" type="image/png" href="/fav.png?steem">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title><%=locals.config.NAME%>PageMaker</title>
+  <meta name="renderer" content="webkit" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <script src="/dependCheck.js"></script>
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="/public/res/main.css" />
+</head>
+<body role="document">
+  <nav class="topNav">
+    <div class="logo"><%=locals.config.NAME%>PageMaker</div>
+    <ul class="topNavIconBar">
+      <li><a href="#" title="全屏" class="fullscreen"><span class="glyphicon glyphicon-fullscreen"></span></a></li>
+      <li><a href="http://nfop.ms.netease.com/open/doc/pageMaker" title="手册" target="_blank"><span class="glyphicon glyphicon-book"></span></a></li>
+      <%if(locals.User.type ==="superAdmin"){%><li><a href="#" title="重新发布" class="republish"><span class="glyphicon glyphicon-refresh"></span></a></li><%}%>
+      <li><a href="/logout?url=http%3A%2F%2Fpagemaker.nfop.ms.netease.com"><span title="退出登录" class="glyphicon glyphicon-log-out"></span></a></li>
+    </ul>
+  </nav>
+  <div class="mainBody">
+    <div class="bodyWrap">
+      <div id="itemBox">
+        <div class="panel panel-success">
+          <div class="itemBoxContent">
+            <div class="pageLoading"><i></i>加载中...</div>
+          </div>
+        </div>
+      </div>
+      <div id="configBox">
+        <div class="panel panel-success">
+          <div class="panel-heading">内容配置区 <small>（<a href="#" class='loadConf'>导入</a> | <a href="#" class='saveConf'>导出</a> | <a href="#" class='clearConf'>清空</a>）</small>
+            <small class="pull-right rightTopOps">
+              <!-- <a href="#" class="updateLog">升级日志</a> |  -->
+              <a href="/log" target="pub" class="publishLog">发布日志</a> | <a class="setting iconLink" href="#setting">设置</a> | <a class="publish iconLink" href="#publish">发布</a>
+            </small>
+          </div>
+          <div class="panel-body conf-body">
+            <div class="conf-content">
+              <div id="pageConfBox">
+                <div class="pageLoading"><i></i>加载中...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="previewBox">
+        <div class="preview">
+          <a class="publish" href="#publish"><span>发布</span></a>
+          <div class="iframe-wrap"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.user = <%-JSON.stringify(locals.User)%>;
+    window._project_ = <%-JSON.stringify(locals.config)%>;
+  </script>
+  <script src="/lib/require.js" data-main="/public/entry" data-js="./main"></script>
+</body>
+</html>

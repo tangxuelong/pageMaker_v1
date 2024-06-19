@@ -1,0 +1,66 @@
+{
+	"id": "项目英文id，一旦启用不可修改",
+  "name": "同id",
+	"NAME": "项目中文名称，可以随时修改",
+	"homePage": "项目主页URL地址，用于错误页面跳转返回用",
+	"func": {
+		"customItem": "是否启用私有组件功能",
+		"customCodeLib": "是否启用私有代码库功能for JSCSS 组件",
+		"careForPC": "是否给PC访问留出控制可能",
+		"jsonDownload": "是否支持json配置文件下载",
+		"inlineCss": "是否将css文件全部内嵌到页面中",
+		"usePrivateCss": "是否启用私有样式",
+		"privateCss": "私有样式或私有样式表，会被内嵌到所有要发布的页面中"
+	},
+	"item": {
+		"share": {
+			"jsFile": "社交分享需要的js文件，可以依赖(zepto||jquery)。支持 $pubKey$ 占位符",
+			"initCode": "初始化分享的代码，支持 $shareData$ 占位符",
+			"triggerCode": "触发立即分享的代码，支持 $shareData$ 占位符",
+			"defShareImg": "默认分享图片",
+			"defShareTitle": "默认分享标题",
+			"defShareDesc": "默认分享描述巴拉巴拉"
+		},
+		"app": {
+			"jsFile": "项目APP的内嵌WebView识别js，填入 # 表示跟 share.jsFile 是同一个js",
+			"code": "检查是否为当前项目APP内嵌view环境，返回true或false。多个组件需要调用这个逻辑"
+		}
+	},
+	"upload": {
+		"loseless": "是否在图片文件上传前启用无损压缩",
+		"maxImageWidth": "最大允许上传的图片宽度，超过则进行缩放",
+		"alert": {
+			"url": "上传错误的时候，报警通知URL地址"
+		},
+		"ftp": {
+			"timeout": "FTP连接超时时间，单位秒",
+			"host": "FTP主机地址",
+			"port": "FTP端口号",
+			"secure": "是否启用SFTP",
+			"secureOptions": "安全配置json，secure未true时有效",
+			"user": "FTP用户名",
+			"password": "FTP密码",
+			"dir": "FTP上传的根目录，可以为空，或设置一个固定子目录",
+			"publicPathPrefix": "FTP资源上传后可以通过公网访问的url前缀，支持 // 自适应协议"
+		}
+	},
+	"publish": {
+		"notify": {
+			"url": "发布完成后进行通知的URL地址"
+		},
+		"alert": {
+			"url": "发布上传错误的时候，报警通知URL地址"
+		},
+		"ftp": {
+			"timeout": 5,
+			"host": "",
+			"port": 21,
+			"secure": false,
+			"secureOptions": {},
+			"user": "",
+			"password": "",
+			"dir": "caipiao",
+			"publicPathPrefix": "https://caipiao.163.com/nfop/"
+		}
+	}
+}

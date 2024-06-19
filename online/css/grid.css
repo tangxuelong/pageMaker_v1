@@ -1,0 +1,230 @@
+/**
+ * 图宫格
+ * 2015-06-26 马超
+ */
+
+
+/* 纵向二列 */
+
+.grid {
+	background: #fff repeat-y;
+	background-size: 100% auto;
+	padding: .5rem 0
+}
+.grid .holderImage {
+	background-size: 50%;
+}
+.grid.prepad0{
+	padding: 0;
+}
+.grid.prepad1{
+	padding: .3rem 0
+}
+
+.grid ul {
+	display: table;
+	width: 94%;
+	margin: auto;
+}
+.grid.prepad0 ul{
+	width: 100%!important;
+}
+.grid.prepad1 ul{
+	width: 97%;
+}
+
+.grid li {
+	display: table-cell;
+	text-align: center;
+	padding: .9rem 0;
+	vertical-align: top;
+}
+
+.grid.prepad0 li{
+	padding: 0!important;
+}
+.grid.prepad0 img{
+	width: 100%!important;
+}
+.grid.prepad1 li{
+	padding: .45rem 0;
+}
+
+.grid.pt2 li {
+	width: 50%;
+}
+
+.grid.pt2 img {
+	width: 86%;
+}
+.grid.pt2.prepad1 img {
+	width: 93%;
+}
+
+/* 纵向三列 */
+
+.grid.pt3 ul {
+	width: 96%
+}
+.grid.pt3.prepad1 ul {
+	width: 98%
+}
+
+.grid.pt3 li {
+	width: 33.333%;
+	padding: 0.5rem 0;
+}
+
+.grid.pt3.prepad1 li {
+	padding: .3rem 0;
+}
+
+.grid.pt3 img {
+	width: 87%;
+}
+.grid.pt3.prepad1 img {
+	width: 93%;
+}
+
+
+/* 纵向四列 */
+.grid.pt4 ul {
+	width: 98%
+}
+.grid.pt4.prepad1 ul {
+	width: 99%
+}
+
+.grid.pt4 li {
+	width: 25%;
+	padding: .4rem 0;
+}
+.grid.pt4.prepad1 li {
+	padding: .2rem 0;
+}
+
+.grid.pt4 img {
+	width: 85%;
+}
+.grid.pt4.prepad1 img {
+	width: 93%;
+}
+
+.grid.st2 li {
+	width: 50%;
+}
+
+.grid.st2 a {
+	display: table;
+	width: 100%;
+}
+
+.grid.st2 img {
+	width: 5rem;
+}
+
+.grid.st2 a >div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.grid.st2 a >div:first-child {
+	width: 6rem;
+}
+
+.grid.st2 a > div:last-child {
+	text-align: left;
+}
+
+
+/* 颜色 */
+
+.grid h1 {
+	color: #3c3e45;
+	padding-top: .3rem;
+}
+
+.grid h2 {
+	color: #acacac;
+	line-height: 1;
+}
+
+.grid .red h2 {
+	color: #f26061;
+}
+
+
+/* 边线 */
+
+.grid.tbLine,
+.grid.lrLine {
+	border: 1px solid #ddd;
+}
+
+.grid.tbLine {
+	border-width: 1px 0;
+}
+
+.grid.lrLine {
+	border-width: 0 1px;
+}
+
+.grid.lrLine.tbLine {
+	border-width: 1px;
+}
+
+
+/* 分割线 */
+
+.grid.verLine li,
+.grid.horLine li {
+	position: relative;
+}
+
+.grid.horLine li:before,
+.grid.verLine li:after {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #ddd;
+	overflow: hidden;
+}
+
+.grid.horLine li:before {
+	bottom: 0;
+	left: 7%;
+	width: 86%;
+	height: 1px;
+}
+
+.grid.verLine li:after {
+	right: 0;
+	top: 10%;
+	height: 80%;
+	width: 1px;
+}
+
+.grid.horLine.hfull li:before {
+	left: 0;
+	width: 100%;
+}
+
+.grid.horLine.hmini li:before {
+	left: 20%;
+	width: 60%;
+}
+
+.grid.verLine.vfull li:after {
+	top: 0;
+	height: 100%;
+}
+
+.grid.verLine.vmini li:after {
+	top: 23%;
+	height: 54%;
+}
+
+.grid ul:last-child li:before,
+.grid ul li:last-child:after {
+	display: none!important;
+}

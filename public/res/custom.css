@@ -1,0 +1,122 @@
+@import url(/widgets/dialog/dialog.css);
+@import url(/widgets/color/picker.css);
+@import url(/widgets/color/picker2.css);
+@import url(/widgets/dropMenu/index.css);
+@import url(/widgets/datetimepicker/css/bootstrap-datetimepicker.min.css);
+@import url(/public/font/style.css);
+@import url(/online/css/customLink.css);
+@import url(/lib/codeMirror/lib/codemirror.css);
+@import url(/lib/codeMirror/theme/mbo.css);
+
+.operateBox {
+  width: 60px;
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 0;
+  position: fixed;
+  top: 15px;
+}
+.operateBox:first-child{
+  left: 10px;
+}
+.operateBox:last-child{
+  right: 10px;
+}
+.operateBox li{
+  list-style: none;
+}
+.operateBox a {
+  display: block;
+  padding: 15px;
+  margin-bottom: 5px;
+  background-color: #eee;
+  border-radius: 10%;
+  text-decoration: none;
+}
+.operateBox a:hover {
+  background-color: #ddd;
+}
+
+#codeBox {
+  vertical-align: top;
+  margin: 0 80px;
+}
+
+#codeBox .panel {
+  margin-bottom: 15px;
+}
+
+#codeBox .loading {
+  text-align: center;
+  display: block;
+  line-height: 200px;
+}
+
+#mainPanelBody {
+  position: relative;
+  overflow: hidden;
+}
+
+#listWrap {
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  width: 60%;
+  top: 15px;
+  background: #fff;
+  z-index: 999;
+  padding-left: 15px;
+  -webkit-transition: right 0.1s ease-out;
+  transition: right 0.1s ease-out;
+}
+#listWrap .glyphicon-chevron-left,
+#listWrap.hideList .glyphicon-chevron-right {
+  display: none;
+}
+#listWrap.hideList  {
+  overflow: visible;
+  right: -60%;
+}
+#listWrap.hideList #listSwitch {
+  left: -15px;
+}
+#listWrap.hideList .glyphicon-chevron-left {
+  display: inline;
+}
+#tableWrap {
+  height: 100%;
+  overflow: auto;
+}
+#listWrap .table {
+  margin-bottom: 0
+}
+#listWrap .itemName {
+  cursor: pointer;
+  display: inline-block;
+  max-width: 85px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#listWrap .itemLink {
+  text-decoration: none;
+  position: relative;
+  top: -3px;
+  left: 3px;
+}
+#listSwitch {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  cursor: pointer;
+}
+
+#listSwitch:hover { 
+  color: #5172da
+}
+#listSwitch span {
+  position: relative;
+  top: 40%;
+}

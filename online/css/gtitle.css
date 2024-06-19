@@ -1,0 +1,59 @@
+.gTitle {
+    text-align: left;
+    font-family: "Microsoft YaHei", arial;
+    font-weight: 400;
+    background: #ffffff no-repeat 0 0;
+    background-size: auto 100%;
+    border-bottom: 1px solid #eaeaea;
+    color: #434343;
+}
+
+.gTitle a {
+    color: #157efb;
+    text-decoration: none;
+}
+
+.gTitle b {
+    color: #f26061;
+}
+
+.gTitle i {
+    color: #ffcc00;
+}
+
+.gTitle em {
+    color: #5d5d5d;
+}
+
+.gTitle strong {
+    font-weight: 700;
+}
+/* 右侧箭头 */
+
+.gTitle >div {
+    position: relative;
+}
+.gTitle .gArrow {
+    float: right;
+    margin: 2% 0 0;
+    color: inherit;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    opacity: .5
+}
+
+.gTitle.collapse .gArrow {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.gImage{
+    border: 0;
+}
+.gImage.collapse .oImage,
+.gImage .cImage {
+    display: none;
+}
+
+.gImage.collapse .cImage {
+    display: block;
+}

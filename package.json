@@ -1,0 +1,47 @@
+{
+  "name": "nfop-pagemaker",
+  "version": "2.0.0",
+  "description": "pageMaker",
+  "author": "马超 <chaoma@corp.netease.com>",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "start": "npm install && node server.js --production",
+    "release": "npm install && node release.js"
+  },
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "busboy": "0.2.14",
+    "clean-css": "4.1.8",
+    "cookie-parser": "1.4.3",
+    "cookie-session": "2.0.0-beta.3",
+    "ejs": "2.5.7",
+    "express": "4.14.1",
+    "ftp": "0.3.10",
+    "imagemin": "5.3.1",
+    "imagemin-jpegtran": "5.0.2",
+    "imagemin-optipng": "5.2.1",
+    "jimp": "0.2.28",
+    "md5": "2.2.1",
+    "needle": "2.0.1",
+    "uglify-es": "3.1.1",
+    "uglify-js": "3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-plugin-html": "^3.0.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 2.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie < 8"
+  ]
+}

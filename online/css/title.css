@@ -1,0 +1,82 @@
+.h5Title {
+    text-align: center;
+    font-family: "Microsoft YaHei", arial;
+    font-weight: 400;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.h5Title.right {
+    text-align: right;
+    background-position: 100% 0;
+}
+
+.h5Title.left {
+    text-align: left;
+    background-position: 0 0;
+}
+
+.h5Title a,
+.p a {
+    color: #157efb;
+    text-decoration: none;
+}
+
+.h5Title b,
+.p b {
+    color: #f26061;
+}
+
+.h5Title i,
+.p i {
+    color: #ffcc00;
+}
+
+.h5Title em,
+.p em {
+    color: #5d5d5d;
+}
+
+.h5Title strong,
+.strong.h5Title,
+.strong.h5Title *,
+.p strong,
+.p strong * {
+    font-weight: 700;
+}
+/* 自定义链接 */
+
+.h5Title >div {
+    position: relative;
+}
+
+.h5Title .cusLink{
+    color: inherit;
+    font-weight: 400;
+}
+
+.h5Title .cusLink .iconSet {
+    position: relative;
+    top: 1px;
+    color: inherit;
+    font-weight: 400;
+}
+
+.h5Title .hLeft {
+    float: left;
+}
+
+.h5Title .hRight {
+    float: right;
+}
+
+.h5Title.center .hLeft {
+    position: absolute;
+    left: 0;
+}
+
+.h5Title.center .hRight {
+    position: absolute;
+    right: 0;
+}

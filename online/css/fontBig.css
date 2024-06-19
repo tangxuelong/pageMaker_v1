@@ -1,0 +1,123 @@
+/* 默认字体定义 */
+html, body, button, input, select, textarea {
+    font: 18px/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media screen and (max-width: 319px) {
+    html, body, button, input, select, textarea {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 320px) {
+    html, body, button, input, select, textarea {
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 360px) {
+    html, body, button, input, select, textarea {
+        font-size: 18px;
+    }
+}
+
+/* for iphone 6(375) and iphone 6+(414) */
+@media screen and (min-width: 374px) {
+    html, body, button, input, select, textarea {
+        font-size: 18.667px;
+    }
+}
+@media screen and (min-width: 400px) {
+    html, body, button, input, select, textarea {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 413px) {
+    html, body, button, input, select, textarea {
+        font-size: 20.667px;
+    }
+}
+@media screen and (min-width: 426px) {
+    html, body, button, input, select, textarea {
+        font-size: 21.333px;
+    }
+}
+
+/* 低版本浏览器出现滚动条，导致宽度小于480的处理*/
+@media screen and (min-width: 450px) {
+    html, body, button, input, select, textarea {
+        font-size: 24px;
+    }
+}
+
+/* 1.5倍像素大小页面兼容代码 */
+@media screen and (min-width: 480px) {
+    html, body, button, input, select, textarea {
+        font-size: 24px;
+    }
+}
+
+/* 针对小米2的540分辨率做了优化 */
+@media screen and (min-width: 540px) {
+    html, body, button, input, select, textarea {
+        font-size: 27px;
+    }
+}
+
+/* 针对小米note的590分辨率做了优化 */
+@media screen and (min-width: 590px) {
+    html, body, button, input, select, textarea {
+        font-size: 29.5px;
+    }
+}
+
+/* 针对魅族的600分辨率做了优化 */
+@media screen and (min-width: 600px) {
+    html, body, button, input, select, textarea {
+        font-size: 30px;
+    }
+}
+
+/* 标准参考尺寸 */
+@media screen and (min-width: 640px) {
+    html, body, button, input, select, textarea {
+        font-size: 32px;
+    }
+}
+/* 超过720像素认为是大屏幕或pc，恢复常态的14号字体
+  更多viewport见 http://viewportsizes.com
+ */
+@media screen and (min-width: 720px) {
+    #_,.fixInnerSec{
+        max-width: 900px;
+        margin: auto;
+    }
+    #_ .imgBox img{
+        max-width: 900px;
+    }
+    .max720 #_,
+    .max720 .fixInnerSec{
+        max-width: 720px;
+    }
+    .max720 #_ .imgBox img{
+        max-width: 720px;
+    }
+    .max1200 #_,
+    .max1200 .fixInnerSec{
+        max-width: 1200px;
+    }
+    .max1200 #_ .imgBox img{
+        max-width: 1200px;
+    }
+    .max1600 #_,
+    .max1600 .fixInnerSec{
+        max-width: 1600px;
+    }
+    .max1600 #_ .imgBox img{
+        max-width: 1600px;
+    }
+    .maxauto #_,
+    .maxauto .fixInnerSec{
+        max-width: 100%;
+    }
+    .maxauto #_ .imgBox img{
+        max-width: 100%;
+    }
+}

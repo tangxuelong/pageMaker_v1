@@ -1,0 +1,148 @@
+/**
+ * 模块入场动画，仅仅对section模块生效
+ * 
+ * css动画设计：刘小乐
+ */
+
+html {
+    /*否则2D变换可能会产生横向滚动条*/
+    overflow-x: hidden;
+}
+
+section {
+    visibility: visible;
+}
+
+section.hiddenX {
+    visibility: hidden!important;
+    -webkit-animation: none!important;
+    animation: none!important;
+}
+
+
+/*********************************************************************/
+
+section.slideUp {
+    -webkit-animation: sectionSlideUp .5s ease .1s both;
+    -webkit-transform-origin: bottom center;
+    animation: sectionSlideUp .5s ease .1s both;
+    transform-origin: bottom center;
+}
+
+@-webkit-keyframes sectionSlideUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes sectionSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*********************************************************************/
+
+section.slideRight {
+    -webkit-animation: sectionSlideRight .5s ease .1s both;
+    -webkit-transform-origin: bottom center;
+    animation: sectionSlideRight .5s ease .1s both;
+    transform-origin: bottom center;
+}
+
+@-webkit-keyframes sectionSlideRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translateX(-110%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes sectionSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-110%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/*********************************************************************/
+
+section.rotateIn:nth-child(2n) {
+    -webkit-animation: rotateInFromLeft .6s ease .1s both;
+    -webkit-transform-origin: left top;
+    animation: rotateInFromLeft .6s ease .1s both;
+    transform-origin: left top;
+}
+
+section.rotateIn:nth-child(2n+1) {
+    -webkit-animation: rotateInFromRight .6s ease .1s both;
+    -webkit-transform-origin: right top;
+    animation: rotateInFromRight .6s ease .1s both;
+    transform-origin: right top;
+}
+
+@-webkit-keyframes rotateInFromLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(20%) rotate(30deg);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes rotateInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateY(20%) rotate(30deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@-webkit-keyframes rotateInFromRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(20%) rotate(-30deg);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes rotateInFromRight {
+    from {
+        opacity: 0;
+        transform: translateY(20%) rotate(-30deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+
+/*********************************************************************/

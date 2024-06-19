@@ -1,0 +1,21 @@
+/* 按钮分组 */
+.buttonGroup a{
+    display: inline-block;
+    border-radius: 0;
+}
+.buttonGroup a:first-child{
+    border-radius: .5rem 0 0 .5rem;
+}
+.buttonGroup a:last-child{
+    border-radius: 0 .5rem .5rem 0;
+}
+.button2 a{width: 50%;}
+.button3 a{width: 33.33%;}
+.button4 a{width: 25%;}
+
+.buttonGroup.bigRadius a:first-child{
+    border-radius: 1.65rem 0 0 1.65rem;
+}
+.buttonGroup.bigRadius a:last-child{
+    border-radius: 0 1.65rem 1.65rem 0;
+}

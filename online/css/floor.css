@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'floorIcon';
+  src: url(floorIcon/fonts/floorIcon.ttf?ojbpte) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.floorIcon,
+.floorBase .active::before {
+  display: inline-block;
+  font-family: "floorIcon", "verdana";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.floorBase {
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+  z-index: 9;
+}
+
+.floorBase div {
+  position: relative;
+  overflow: hidden;
+}
+
+.floorBase div p {
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.floorBase p a {
+  display: inline-block;
+}
+
+.floorBase .active {
+  font-weight: 700;
+}
+.floorBase .active::before {
+  content: "\e947";
+  margin-right: .3rem;
+  position: relative;
+  top: 1px;
+}
+.theme-e9d2 .active::before {
+  content: '\e9d2'
+}
+.theme-ea54 .active::before {
+  content: '\ea54'
+}
+
+.floorBase .handler {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2rem;
+  text-align: center;
+}
+
+.floorBase .handler span {
+  display: block;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.floorHook,
+.floorEnd {
+  display: block;
+  /* 显示一个像素以让浏览器默认的锚点跳转可以生效 */
+  height: 1px;
+  overflow: hidden;
+  margin-bottom: -1px;
+  opacity: 0;
+}
+
+
+/* 显示展开按钮状态 */
+
+.floorBase.showHandler .handler {
+  display: block;
+}
+.floorBase.showHandler div p {
+  margin-right: 2rem;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* 展开状态 */
+
+.floorBase.showHandler.open div p {
+  white-space: normal;
+}
+
+.floorBase.showHandler.open .handler span {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

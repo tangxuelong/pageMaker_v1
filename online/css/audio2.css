@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'musicCtrl';
+    src: url(musicCtrl/fonts/musicCtrl.ttf?hxgpvm) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.floatTheme .audioCtrl i {
+    font-family: 'musicCtrl';
+    speak: none;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.floatTheme {
+    position: fixed;
+    z-index: 98;
+}
+.floatTheme .audioCtrl i {
+    cursor: pointer;
+    font-size: 1.333rem;
+}
+.floatTheme.bigCtrl .audioCtrl i {
+    font-size: 1.833rem;
+}
+.floatTheme.smallCtrl .audioCtrl i {
+    font-size: .917rem;
+}
+.floatTheme.pos1 {
+    left: .2rem;
+    top: .2rem;
+}
+.floatTheme.pos2 {
+    right: .3rem;
+    top: .2rem;
+}
+.floatTheme.pos3 {
+    left: .3rem;
+    bottom: 0;
+}
+.floatTheme.pos4 {
+    right: .3rem;
+    bottom: 0;
+}
+.floatTheme .audioCtrl i:before {
+    color: #333;
+    text-shadow: 0 0 4px #eee;
+}
+.floatTheme.theme1 .audioCtrl i:before {
+    content: "\e911";
+}
+.floatTheme.theme2 .audioCtrl i:before {
+    content: "\e951";
+}
+.floatTheme.theme3 .audioCtrl i:before {
+    content: "\e910";
+}
+.floatTheme.theme4 .audioCtrl i:before {
+    content: "\ea29";
+}
+.floatTheme .audioCtrl.loading i:before {
+    content: "\e97b";
+}
+/* 播放中，轻轻摇摆 */
+
+.floatTheme .audioCtrl.playing {
+    animation: 1.4s linear 0s normal none infinite shakeLight;
+    -webkit-animation: 1.4s linear 0s normal none infinite shakeLight;
+}
+.floatTheme.theme4 .audioCtrl.playing {
+    animation: none;
+    -webkit-animation: none;
+}
+.floatTheme.theme4 .audioCtrl.playing i:before{
+	content : "\ea27";
+}
+/* 加载中，转圈 */
+
+.floatTheme .audioCtrl.loading {
+    animation: 1s linear 0s normal none infinite circle;
+    -webkit-animation: 1s linear 0s normal none infinite circle;
+}
+@keyframes shakeLight {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(7.5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-7.5deg);
+    }
+}
+@-webkit-keyframes shakeLight {
+    0%, 100% {
+        -webkit-transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(7.5deg);
+    }
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    75% {
+        -webkit-transform: rotate(-7.5deg);
+    }
+}
+@keyframes circle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes circle {
+    0%, 100% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,25 @@
+.qrcode-wap{
+	background-repeat: repeat-y;
+	background-position: 0 0;
+	background-size: 100% auto;
+}
+
+.qrcode-imgHolder{
+	display: inline-block;
+	width: 100%;
+	margin-right: -100%;
+	visibility: hidden;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+.qrcode-wrapHolder{
+	width: 100%;
+	display: inline-block;
+	font-size: 0;
+	vertical-align: middle;
+}
+
+.qrcode-wap .qrcode-box{
+	padding: .5rem;
+}

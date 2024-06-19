@@ -1,0 +1,62 @@
+/* 二维码最外层容器 */
+.qrcode-pc {
+	display: none;
+	position: fixed;
+	z-index: 90;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 居中蒙层提示 */
+.qrcode-pc1 {
+    background: rgba(0, 0, 0, .6);
+    /* fix-lower-ie */
+    background: #eee \9;
+}
+
+.qrcode-pc1 .qrcode-box {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    padding: 10px;
+    margin: -110px 0 0 -110px;
+}
+
+/* 两侧浮动 */
+.qrcode-pc2,
+.qrcode-pc3{
+	width: 170px;
+}
+.qrcode-pc2 .qrcode-box,
+.qrcode-pc3 .qrcode-box {
+    position: absolute;
+    top: 30%;
+    padding: 10px;
+}
+.qrcode-pc3{
+	left: auto;
+	right: 0;
+}
+
+/* 底部说明文字 */
+
+.qrcode-pc .qrcode-info{
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 14px;
+	margin: -5px 0;
+}
+
+@media screen and (min-width: 720px) {
+  .qrcode-pc1{
+  	display:block;
+  }
+}
+@media screen and (min-width: 1340px) {
+  .qrcode-pc{
+  	display:block;
+  }
+}

@@ -1,0 +1,3 @@
+./build/**/*.js
+./server/**/*.js
+./dist/**/*.js

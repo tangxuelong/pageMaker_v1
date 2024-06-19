@@ -1,0 +1,114 @@
+@font-face {
+	font-family: 'textRoll';
+	src: url(textRoll/fonts/textRoll.ttf?eg408n) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.textRoll {
+	font-family: "textRoll", "verdana";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.textRollSec {
+	background-position: 0 0;
+	background-repeat: repeat-y;
+	background-size: 100% auto;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+.textRollSec .rollBgImg {
+	display: inline-block;
+	width: 100%;
+	margin-right: -100%;
+	visibility: hidden;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+.textRollSec .textRollWrap{
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.textRollSec .textRollContent {
+	position: relative;
+}
+
+.textRollSec .textRollList {
+	overflow: hidden;
+	position: relative;
+}
+
+.textRollSec ul {
+	position: relative;
+}
+
+
+/* 有前置图标 */
+
+.textRollSec.iconShow .textRoll {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 1.667em;
+	text-align: right;
+	font-size: 120%;
+	padding-right: .3em;
+	padding-top: .12em;
+}
+
+.textRollSec.iconShow .textRollList {
+	margin-left: 2em;
+}
+
+
+/* 上下滚动 */
+
+.textRollSec.roll-y li {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: left;
+}
+
+.textRollSec.roll-y.align-center li {
+	text-align: center;
+}
+
+
+/* 左右滚动 */
+
+.textRollSec.roll-x ul {
+	white-space: nowrap;
+	overflow: visible;
+	display: inline-block;
+}
+
+.textRollSec.roll-x li {
+	display: inline-block;
+	margin-right: 3em;
+	white-space: nowrap;
+}
+
+.textRollSec.roll-x.sp1 li {
+	margin-right: 1em;
+}
+
+.textRollSec.roll-x.sp2 li {
+	margin-right: 2em;
+}
+
+.textRollSec.roll-x.sp4 li {
+	margin-right: 4em;
+}

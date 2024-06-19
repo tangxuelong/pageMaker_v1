@@ -1,0 +1,10 @@
+{
+  "apps": [{
+    "name": "pageMaker",
+    "script": "./server.js",
+    "watch": false,
+    "args": "--production",
+    "error_file": "./logs/pagemaker.log",
+    "out_file": "./logs/pagemaker.log"
+  }]
+}

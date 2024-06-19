@@ -1,0 +1,46 @@
+.h5TitleLink {
+    text-align: left;
+    font-family: "Microsoft YaHei", arial;
+    font-weight: 400;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.h5TitleLink a {
+    color: #157efb;
+    text-decoration: none;
+}
+
+.h5TitleLink b {
+    color: #ba142b;
+}
+
+.h5TitleLink i {
+    color: #157efb;
+}
+
+.h5TitleLink em {
+    color: #5d5d5d;
+}
+
+.h5TitleLink strong {
+    font-weight: 700;
+}
+/* 右侧箭头 */
+
+.h5TitleLink >div {
+    position: relative;
+}
+
+.h5TitleLink .gArrow {
+    float: right;
+    margin: 2% 0 0;
+    color: inherit;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    opacity: .5;
+}
+
+

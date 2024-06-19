@@ -1,0 +1,48 @@
+/**
+ * 底部浮层
+ */
+.btmFloat{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 97;
+}
+/* 覆盖全局hide样式，防止在被其他组件隐藏（比如分组标题）时无法计算元素宽高导致组件初始化失败 */
+.btmFloat.hide {
+	display: block!important;
+	z-index: -1;
+	opacity: 0;
+}
+.btmFloat .fixInnerSec{
+	border-top: 1px solid #ddd;
+	position: relative;
+}
+.btmFloat.noborder .fixInnerSec{
+	border-top: 0;
+}
+.btmFloat .closeLink{
+	position: absolute;
+	top: 0;
+	width: 12%;
+	height: 100%;
+	display: block;
+	z-index: 2;
+}
+.btmFloat .closeLink.pos1{
+	left: 0;
+}
+.btmFloat .closeLink.pos2{
+	right: 0;
+}
+.btmFloat .fixIphoneX {
+	display: none
+}
+.iphonex .btmFloat .fixIphoneX {
+	display: block;
+	height: 2.134rem;
+	max-height: 34pt;
+	background-repeat: no-repeat;
+	background-size: 100% 50000px;
+	background-position: center bottom;
+}

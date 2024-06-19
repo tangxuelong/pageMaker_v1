@@ -1,0 +1,12 @@
+.rollnum {
+	vertical-align: middle;
+	font-family: "Monaco","Consolas"
+}
+.rollnum ul{
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: text-top;
+}
+.rollnum li{
+	text-indent: 0;
+}

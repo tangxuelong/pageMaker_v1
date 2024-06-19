@@ -1,0 +1,211 @@
+/* 最外层容器 */
+.swipeSec{
+	background-repeat: repeat-y;
+	background-position: 0 center;
+	background-size: 100% auto;
+	vertical-align: middle;
+	font-size: 0;
+}
+/* 覆盖全局hide样式，防止在被其他组件隐藏（比如分组标题）时无法计算元素宽高导致组件初始化失败 */
+.swipeSec.hide {
+	position: absolute;
+	display: block!important;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	opacity: 0;
+}
+.swipeSecPos1{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 97;
+}
+.swipe-imgHolder{
+	display: inline-block;
+	width: 100%;
+	margin-right: -100%;
+	visibility: hidden;
+	vertical-align: middle;
+	font-size: 0;
+}
+.swipe-wrapHolder{
+	width: 100%;
+	display: inline-block;
+	font-size: 0;
+	vertical-align: middle;
+}
+
+/* 轮播容器 */
+.swipe {
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
+}
+
+.swipeWrap {
+	overflow: hidden;
+	position: relative;
+}
+
+.swipeWrap .swipeItem {
+	float: left;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.swipeWrap .swipeItem .mask{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	-webkit-transition: all .5s cubic-bezier(0, 0, .2, 1);
+	transition: all .5s cubic-bezier(0, 0, .2, 1);
+}
+
+.swipeWrap .swipeItem .left{
+	-webkit-transform: translateX(-30%);
+	transform: translateX(-30%);
+	opacity: 0;
+}
+.swipeWrap .swipeItem .right{
+	-webkit-transform: translateX(30%);
+	transform: translateX(30%);
+	opacity: 0;
+}
+.swipeWrap .swipeItem .top{
+	-webkit-transform: translateY(-30%);
+	transform: translateY(-30%);
+	opacity: 0;
+}
+.swipeWrap .swipeItem .bottom{
+	-webkit-transform: translateY(30%);
+	transform: translateY(30%);
+	opacity: 0;
+}
+
+.swipeWrap .swipeItem.onshow .mask{
+	-webkit-transform: translateX(0)!important;
+	transform: translateX(0)!important;
+	opacity: 1!important;
+}
+
+.swipeCtrl {
+	text-align: center;
+	font-size: 0;
+	line-height: 0;
+	padding: .5rem .6rem;
+}
+.swipeCtrl.ctrlType3 {
+	font-size: inherit;
+}
+
+.swipeCtrl.ctrlPos2 {
+	position: relative;
+	z-index: 2;
+	margin-bottom: -2.2rem;
+	top: -2.2rem;
+	text-align: right;
+}
+
+.swipeCtrl.ctrlPos11{
+	text-align: left;
+}
+.swipeCtrl.ctrlPos12{
+	text-align: right;
+}
+
+.swipeCtrl i {
+	display: inline-block;
+	height: .8rem;
+	width: .8rem;
+	overflow: hidden;
+	background-color: #f26061;
+	margin: .2rem .15rem 0;
+	font-size: 0;
+	line-height: 0;
+	border: 1px solid #eee;
+	opacity: .3
+}
+
+.swipeCtrl i.active {
+	opacity: .9;
+}
+
+.swipeCtrl.ctrlType1 i {
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-clip: padding-box;
+}
+.swipeCtrl.ctrlType3 b {
+	display: block;
+	height: 1.5rem;
+	line-height: 1.5rem;
+}
+
+
+/* 带配图的轮播 */
+
+.textSwipe .swipeItem {
+	position: relative;
+}
+.swipeItem .fs1{
+	font-size: 1rem!important;
+}
+
+.textSwipe .swipeItem span {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.4);
+	color: #fff;
+	display: block;
+	line-height: 1.5rem;
+	overflow: hidden;
+	padding: .5rem .6rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+	text-align:justify;
+	text-justify: inter-word;
+}
+
+.textSwipe .swipeCtrl.ctrlPos2 {
+	text-align: right;
+	padding-right: 1rem;
+}
+
+.textSwipe.nowrap .swipeItem span{
+	overflow: visible;
+	white-space: normal;
+	word-break: break-all;
+}
+.textSwipe.outer .swipeItem span{
+	position: static;
+	background-color: transparent;
+	padding-bottom: 0;
+	color: #5d5d5d;
+	line-height: 1.5;
+}
+.textSwipe.outer .swipeCtrl{
+	padding-top: 0;
+}
+.textSwipe .swipeCtrl{
+	text-shadow: 1px 1px 0px #eee;
+}
+.textSwipe .swipeCtrl.ctrlPos2{
+	color: #fff;
+	text-shadow: none;
+}
+.textSwipe.outer .swipeCtrl b{
+	color: #5d5d5d;
+}
+.textSwipe .swipeCtrl.ctrlType3{
+	top: -2.5rem;
+	margin-bottom: -2.5rem;
+}
+.textSwipe.outer .swipeCtrl.ctrlPos2{
+	margin-bottom: -1.3rem;
+	top: -1.3rem;
+}

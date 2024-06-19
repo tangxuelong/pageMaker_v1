@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="shortcut icon" type="image/png" href="/fav.png?steem">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title><%=locals.NAME%>pageMaker发布日志</title>
+  <meta name="renderer" content="webkit" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="/res/log.css" />
+</head>
+<body role="document">
+  <nav class="navbar navbar-inverse">
+    <div>
+      <div class="navbar-header"><span class="navbar-brand"><%=locals.NAME%>pageMaker发布日志</span></div>
+    </div>
+  </nav>
+  <div class="container mainBody">
+    <div class="row">
+      <div class="search-box">
+        <div class="search-top">
+          <div class="input-box">
+            <div class="input-group">
+              <span class="input-group-addon">搜索</span>
+              <input type="text" id="searchInput" class="form-control" placeholder="输入任何关键词过滤日志，多词以空格分隔" aria-describedby="sizing-addon1">
+            </div>
+          </div>
+        </div>
+        <small>【说明】 发布目录包含 test 字样的不予记录发布日志。每个项目最大保留最近 <%-locals.maxLog%> 条发布记录。</small>
+      </div>
+      <table class="table table-striped table-bordered log-table">
+        <thead>
+          <tr>
+            <th width="300">用户</th>
+            <th>发布目录</th>
+            <th width="75">覆盖发布</th>
+            <th width="75">新密码</th>
+            <th>时光机车票</th>
+            <th width="155">发布时间</th>
+          </tr>
+        </thead>
+        <%
+				var data = locals.data || [];
+        var html = [], info, name, time, userDesc;
+        
+				var getCheckIcon = function(st){
+					return st ? "<b class='glyphicon glyphicon-ok'></b>": "&nbsp;";
+				};
+				var fillZ = function(a){ return ("0"+a).slice(-2)  };
+				for(var i=0; i<data.length; i++){
+          info = data[i];
+          userDesc = info.userDesc || (info.name + "(" + info.user + ")");
+					time = new Date(info.time);
+					html.push([
+						'<tr>',
+						'<td class="seachTD">', userDesc, '</td>',
+						'<td class="pubFld">',
+							info.hasKey ? "<b class='glyphicon glyphicon-lock' title='有发布口令'></b>" : "",
+							"<span class='seachTD'>", info.pubFld, '</span></td>',
+						'<td>', getCheckIcon(info.isCoverOldFile), info.repub ? ' REP' : '', '</td>',
+						'<td>', getCheckIcon(info.isNewKey), '</td>',
+						'<td class="seachTD">'+ info.pubFld +'#', info.backupKey, '</td>',
+						'<td class="seachTD">',
+							[time.getFullYear(), fillZ(time.getMonth()+1), fillZ(time.getDate())].join("/"), " ",
+							[fillZ(time.getHours()), fillZ(time.getMinutes()), fillZ(time.getSeconds())].join(":"),
+						'</td>',
+						'</tr>'].join(""));
+				}
+				if(data.length === 0){
+					html = ['<tr class="nullTR"><td colspan="7">该项目下暂无发布记录</td></tr>'];
+				}
+				%>
+          <tbody id="mainDataBody">
+            <%-html.join("")%>
+          </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="/lib/require.js" data-main="/public/entry" data-js="./log"></script>
+</body>
+</html>

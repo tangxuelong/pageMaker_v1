@@ -1,0 +1,99 @@
+/* 时间轴 */
+
+.timeline ul {
+    padding-left: .7em;
+    padding-top: .4em;
+    padding-bottom: -.4em;
+}
+
+.timeline li {
+    border-left: 1px solid #f26061;
+    padding: 0 0 1em 1em;
+    position: relative;
+}
+
+.timeline li:last-child {
+    padding-bottom: 0;
+    border-color: transparent;
+}
+
+.timeline.h1b h1{
+	font-weight: 700;
+}
+
+.timeline li > * {
+    position: relative;
+    top: -0.35em;
+}
+
+.timeline li b{
+    font-weight: 700;
+}
+
+.timeline h3 {
+    opacity: .7;
+}
+
+.timeline li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: .7em;
+    height: .7em;
+    left: -.39em;
+    font-weight: 400;
+    top: 0;
+    border-radius: 50%;
+    background-clip: padding-box;
+    overflow: hidden;
+    background-color: #f26061;
+    border: 1px solid #fff;
+    -webkit-box-shadow: 0 0 0 1px #f26061;
+    box-shadow: 0 0 0 1px #f26061;
+}
+
+/* 蓝色 */
+
+.timeline.blue li {
+    border-color: #4986e7;
+}
+
+.timeline.blue li:before {
+    background-color: #4986e7;
+    -webkit-box-shadow: 0 0 0 1px #4986e7;
+    box-shadow: 0 0 0 1px #4986e7;
+}
+/* 黄色 */
+
+.timeline.yellow li {
+    border-color: #ffb400;
+}
+
+.timeline.yellow li:before {
+    background-color: #ffb400;
+    -webkit-box-shadow: 0 0 0 1px #ffb400;
+    box-shadow: 0 0 0 1px #ffb400;
+}
+/* 橙色 */
+
+.timeline.orange li {
+    border-color: #ff9c00;
+}
+
+.timeline.orange li:before {
+    background-color: #ff9c00;
+    -webkit-box-shadow: 0 0 0 1px #ff9c00;
+    box-shadow: 0 0 0 1px #ff9c00;
+}
+/* 白色 */
+
+.timeline.white li {
+    border-color: #fff;
+}
+
+.timeline.white li:before {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 1px #fff;
+    border-color: #5d5d5d
+}
