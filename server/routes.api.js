@@ -9,6 +9,7 @@ const custom = require('./custom');
 const CONFIG = require('../config.json');
 
 const user = "chaoma@corp.netease.com";
+const name = "chaoma@corp.netease.com";
 // 导出API路由
 module.exports = function (configs) {
   // 增加全局项目标志引用
