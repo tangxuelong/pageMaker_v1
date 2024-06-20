@@ -34,14 +34,14 @@
 		},
 		"ftp": {
 			"timeout": 5,
-			"host": "--",
+			"host": "http://47.113.207.113",
 			"port": 21,
 			"secure": false,
 			"secureOptions": {},
-			"user": "--",
-			"password": "--",
-			"dir": "uploadTest",
-			"publicPathPrefix": "//pimg1.126.net/nfop/uploadTest/"
+			"user": "ftppagemaker",
+			"password": "Password@1",
+			"dir": "pagemaker",
+			"publicPathPrefix": "http://47.113.207.113/nfop/"
 		}
 	},
 	"publish": {
@@ -53,14 +53,14 @@
 		},
 		"ftp": {
 			"timeout": 5,
-			"host": "--",
+			"host": "http://47.113.207.113",
 			"port": 21,
 			"secure": false,
 			"secureOptions": {},
-			"user": "--",
-			"password": "--",
-			"dir": "pageMaker",
-			"publicPathPrefix": "https://caipiao.163.com/nfop/"
+			"user": "ftppagemaker",
+			"password": "Password@1",
+			"dir": "pagemaker",
+			"publicPathPrefix": "http://47.113.207.113/nfop/"
 		}
 	}
 }
