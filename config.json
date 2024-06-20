@@ -14,7 +14,7 @@
 	},
 	"item": {
 		"share": {
-			"jsFile": "//pimg1.126.net/nfop/common/appcore.js?$pubKey$",
+			"jsFile": "http://res.wx.qq.com/open/js/jweixin-1.0.0.js",
 			"initCode": "window.AppCore&&AppCore.share($shareData$)",
 			"triggerCode": "window.AppCore&&window.AppCore.shareNow()",
 			"defShareImg": "",
