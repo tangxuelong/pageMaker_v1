@@ -131,7 +131,7 @@ Object.assign(myFTP.prototype, {
       target = path.join(this.__config.dir || "", target || "").replace(/\\/g, "/");
       // 创建目录
       this.__ftp.mkdir(target, true, function (err) {
-        err ? reject("FTP目录创建失败（" + target + "）。") : resolve(target);
+        err ? reject("FTP目录创建失败（" + target + "）。" + err) : resolve(target);
       });
     });
   },
