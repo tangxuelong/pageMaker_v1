@@ -40,8 +40,8 @@
 			"secureOptions": {},
 			"user": "ftppagemaker",
 			"password": "Password@1",
-			"dir": "pagemaker",
-			"publicPathPrefix": "http://47.113.207.113/nfop/"
+			"dir": "upload",
+			"publicPathPrefix": "http://47.113.207.113/nfop/upload"
 		}
 	},
 	"publish": {
@@ -59,8 +59,8 @@
 			"secureOptions": {},
 			"user": "ftppagemaker",
 			"password": "Password@1",
-			"dir": "pagemaker",
-			"publicPathPrefix": "http://47.113.207.113/nfop/"
+			"dir": "publish",
+			"publicPathPrefix": "http://47.113.207.113/nfop/publish"
 		}
 	}
 }
