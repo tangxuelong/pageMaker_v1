@@ -34,7 +34,7 @@
 		},
 		"ftp": {
 			"timeout": 5,
-			"host": "http://47.113.207.113",
+			"host": "47.113.207.113",
 			"port": 21,
 			"secure": false,
 			"secureOptions": {},
@@ -53,7 +53,7 @@
 		},
 		"ftp": {
 			"timeout": 5,
-			"host": "http://47.113.207.113",
+			"host": "47.113.207.113",
 			"port": 21,
 			"secure": false,
 			"secureOptions": {},
